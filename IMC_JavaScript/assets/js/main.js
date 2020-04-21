@@ -6,14 +6,16 @@ form.addEventListener("submit", function (event){
 
 });
 
+// função especifica para criação de paragrafos 
+function criaP () {
+      //criar um paragrafo e inseir no resultado
+      const p = document.createElement('p');
+     return p;
+}
+
 // função para adicionar HTML dentro da div resultados
 function setResultado (msg){
     const resultado = document.querySelector("#resultado");
     resultado.innerHTML = ""; //div limpa
-
-    //criar um paragrafo e inseir no resultado
-    const p = document.createElement('p');
-    p.classList.add('paragrafo-resultado'); // criação de uma classe
-    p.innerHTML = "Qualquer coisa";
-    resultado.appendChild(p); // elemento para ser adc na div
+    const p = criaP();
 }
