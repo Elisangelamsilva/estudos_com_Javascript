@@ -62,5 +62,11 @@ function setResultado (msg, isValid){
     resultado.innerHTML = ""; //div limpa
 
     const p = criaP();
+
+    if (isValid) {
+        p.classList.add("paragrafo-resultado");
+    } else {
+        p.classList.add("bad");
+    }
     resultado.appendChild(p);
 }
