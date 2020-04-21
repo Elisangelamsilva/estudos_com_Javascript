@@ -9,6 +9,8 @@ form.addEventListener("submit", function (event){
     // conversão para Number
     const peso = Number(inputPeso.value);
     const altura = Number(inputAltura.value);
+
+    // Altura e peso são válidos?
     if (!peso) {
         setResultado("Peso inválido", false);
         return;
@@ -17,7 +19,16 @@ form.addEventListener("submit", function (event){
         setResultado("Altura inválido", false);
         return;
     }
+
+    // calcular o IMC 
+    const imc = getImc(peso, altura);
+
 });
+
+function getImc (peso, altura) {
+    const imc = peso / altura ** 2;
+    return imc.toFixed(2);
+}
 
 // função especifica para criação de paragrafos 
 function criaP () {
@@ -32,4 +43,5 @@ function setResultado (msg, isValid){
     resultado.innerHTML = ""; //div limpa
 
     const p = criaP();
+    resultado.appendChild(p);
 }
