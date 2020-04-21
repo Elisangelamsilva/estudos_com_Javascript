@@ -10,7 +10,11 @@ form.addEventListener("submit", function (event){
     const peso = Number(inputPeso.value);
     const altura = Number(inputAltura.value);
     if (!peso) {
-        setResultado("Peso inválido");
+        setResultado("Peso inválido", false);
+        return;
+    }
+    if (!altura) {
+        setResultado("Altura inválido", false);
         return;
     }
 });
@@ -23,7 +27,7 @@ function criaP () {
 }
 
 // função para adicionar HTML dentro da div resultados
-function setResultado (msg){
+function setResultado (msg, isValid){
     const resultado = document.querySelector("#resultado");
     resultado.innerHTML = ""; //div limpa
 
