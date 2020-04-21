@@ -5,3 +5,9 @@ form.addEventListener("submit", function (event){
     event.preventDefault();
 
 });
+
+// função para adicionar algo nos resultados
+function setResultado (msg){
+    const resultado = document.querySelector("#resultado");
+    resultado.innerHTML = msg;
+}
