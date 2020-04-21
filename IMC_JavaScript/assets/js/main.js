@@ -5,6 +5,14 @@ form.addEventListener("submit", function (event){
     event.preventDefault();
     const inputPeso = form.target.querySelector('#peso'); //Qual elemento que tá recebendo o evento
     const inputAltura = form.target.querySelector('#altura');
+
+    // conversão para Number
+    const peso = Number(inputPeso.value);
+    const altura = Number(inputAltura.value);
+    if (!peso) {
+        setResultado("Peso inválido");
+        return;
+    }
 });
 
 // função especifica para criação de paragrafos 
