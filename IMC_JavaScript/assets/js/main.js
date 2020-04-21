@@ -6,8 +6,14 @@ form.addEventListener("submit", function (event){
 
 });
 
-// função para adicionar algo nos resultados
+// função para adicionar HTML dentro da div resultados
 function setResultado (msg){
     const resultado = document.querySelector("#resultado");
-    resultado.innerHTML = msg;
+    resultado.innerHTML = ""; //div limpa
+
+    //criar um paragrafo e inseir no resultado
+    const p = document.createElement('p');
+    p.classList.add('paragrafo-resultado'); // criação de uma classe
+    p.innerHTML = "Qualquer coisa";
+    resultado.appendChild(p); // elemento para ser adc na div
 }
