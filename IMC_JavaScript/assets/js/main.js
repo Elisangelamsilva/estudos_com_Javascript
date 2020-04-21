@@ -20,8 +20,14 @@ form.addEventListener("submit", function (event){
         return;
     }
 
+
     // calcular o IMC 
     const imc = getImc(peso, altura);
+    const nivelImc = getNivelImc(imc);
+
+    const msg = `Seu Imc é  ${imc} (${nivelImc}.)`;
+
+    setResultado();
 
 });
 
