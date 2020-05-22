@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular o fatorial de um número</title>
     <script type="text/javascript" src="script.js"></script>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+        #stylo{
+            background: cadetblue;
+            font-size: 18px;
+            height: 150px;
+            width: 600px;
+            padding: 40px 40px;
+            margin: 140px auto;
+        }
+
+    </style>
 </head>
 <body>
+    <div id="stylo">
     <h1>Fatorial</h1>
     <label>Calcular o fatorial de <input type="number" id="recebeu" name="Name" /></label>
     <input type="button" value="Calcular" onclick="fatoriar()">
     <div id="resultado"></div>
+    </div>
 </body>
 </html>
