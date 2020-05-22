@@ -1,0 +1,1 @@
+Componente que possui duas caixas de texto que só aceita números, possui um botão calcular que quando acionado deve calcular o fatorial do número digitado, imprimindo o resultado na tela. 
