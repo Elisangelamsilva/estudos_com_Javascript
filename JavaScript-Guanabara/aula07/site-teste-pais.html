@@ -8,7 +8,19 @@
 <body>
     <h1>País</h1>
     Em que país você mora?<input type="text" name="" id="txt">
-    <input type="button" value="Verfificar" onclick="verificar">
+    <input type="button" value="Verfificar" onclick="verificar()">
     <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var txtv = document.querySelector('input#txt')
+            var res = document.querySelector('div#res')
+            if(pais == "Brasil"){
+                console.log("Você é brasileiro.")
+            } else{
+                console.log('Você é estrangeiro.')
+        }
+        }
+    </script>
 </body>
 </html>
