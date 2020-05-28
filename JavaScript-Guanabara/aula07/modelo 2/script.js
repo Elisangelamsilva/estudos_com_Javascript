@@ -20,8 +20,30 @@ function verificar(){
 
         if (fsex[0].checked){
             genero = 'Homem'
+
+            if(idade >= 0 && idade < 10){
+
+            }else if (idade >= 10 && idade < 21){
+
+            } else if(idade >= 21 && idade < 50){
+
+            }else{
+                //idoso
+            }
+
         } else if (fsex[1].checked) {
             genero = "Mulher"
+
+            if(idade >= 0 && idade < 10){
+
+            }else if (idade >= 10 && idade < 21){
+
+            } else if(idade >= 21 && idade < 50){
+
+            }else{
+                //idoso
+            }
+
         }
         res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
