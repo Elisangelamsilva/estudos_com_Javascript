@@ -8,6 +8,8 @@ function verificar(){
     if(fano.nodeValue.length == 0 || fano.value > ano){
         window.alert("[ERRO] Verifique os dados e tente novamente!")
     }else{
-
+        var fsex = document.getElementsByName('redsex')
+        var idade = ano - Number(fano.value)
+        res.innerHTML = `Idade calculada: ${idade}`
     }
 }
