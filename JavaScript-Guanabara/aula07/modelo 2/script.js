@@ -5,17 +5,18 @@ function verificar(){
     var res = document.getElementById('res')
 
 //caso a ano seja igual a zero ou seja colocado um ano maior que o atual
-    if(fano.nodeValue.length == 0 || fano.value > ano){
+    if(fano.value.length == 0 || Number(fano.value) > ano){
         window.alert("[ERRO] Verifique os dados e tente novamente!")
     }else{
-        var fsex = document.getElementsByName('redsex')
+        var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var genero = ''
         if (fsex[0].checked){
             genero = 'Homem'
-        } else {
+        } else if (fsex[1].checked) {
             genero = "Mulher"
         }
+        res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     }
 }
