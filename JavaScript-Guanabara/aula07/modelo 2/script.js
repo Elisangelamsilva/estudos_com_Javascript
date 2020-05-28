@@ -11,6 +11,13 @@ function verificar(){
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var genero = ''
+
+        // criar dinamicamente imagem
+        // 1 - criação de uma tag img
+        var img = document.createElement('img') 
+        // 2 - id desse atributo
+        img.setAttribute('id', 'foto')
+
         if (fsex[0].checked){
             genero = 'Homem'
         } else if (fsex[1].checked) {
