@@ -4,7 +4,10 @@ function verificar(){
     var fano = document.getElementById("txtano")
     var res = document.getElementById('res')
 
-    if(fano.nodeValue.length == 0 || fano.value > 0){
+//caso a ano seja igual a zero ou seja colocado um ano maior que o atual
+    if(fano.nodeValue.length == 0 || fano.value > ano){
         window.alert("[ERRO] Verifique os dados e tente novamente!")
+    }else{
+
     }
 }
