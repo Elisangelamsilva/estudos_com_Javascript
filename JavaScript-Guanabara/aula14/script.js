@@ -2,10 +2,16 @@ let recebe = document.getElementById("txt1")
 let leva = document.getElementById("seltab")
 let res = documento.getElementById("res")
 let valores = []
-let fav = Number(recebe.value)
+
+function isNumber(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
+    }else{
+        return false
+    }
+}
 
 function calcular(){
-
 
     if(isNumber(recebe.value && !inLista)){
         
