@@ -10,7 +10,7 @@ function calcular(){
     if(isNumber(recebe.value && !inLista)){
         
     }else{
-        window.alert("Por favor, digite um número válido!")
+        window.alert("Por favor, digite um número válido ou já está em lista!")
     }
 
 }
