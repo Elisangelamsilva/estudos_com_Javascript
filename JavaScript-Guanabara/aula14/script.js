@@ -21,7 +21,7 @@ function inLista(n, l){
 
 function calcular(){
 
-    if(isNumber(recebe.value && !inLista)){
+    if(isNumber(recebe.value) && !inLista(recebe.value, valores)){
         
     }else{
         window.alert("Por favor, digite um número válido ou já está em lista!")
