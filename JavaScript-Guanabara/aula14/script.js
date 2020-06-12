@@ -24,6 +24,7 @@ function calcular(){
     if(isNumber(recebe.value) && !inLista(recebe.value, valores)){
         valores.push(Number(recebe.value))
         let item = documente.createElement('option')
+        item.text = `Valor ${recebe.value} adicionado`
     }else{
         window.alert("Por favor, digite um número válido ou já está em lista!")
     }
