@@ -1,6 +1,6 @@
 let recebe = document.getElementById("txt1")
-let lista = document.getElementById("seltab")
-let res = documento.getElementById("res")
+let lista = document.getElementById("flista")
+let res = document.getElementById("res")
 let valores = []
 
 function isNumber(n){
@@ -25,9 +25,12 @@ function calcular(){
         valores.push(Number(recebe.value))
         let item = documente.createElement('option')
         item.text = `Valor ${recebe.value} adicionado`
-        lista.apendChild(item)
+        lista.appendChild(item)
     }else{
         window.alert("Por favor, digite um número válido ou já está em lista!")
     }
+
+    recebe.value = ``
+    recebe.focus()
 
 }
