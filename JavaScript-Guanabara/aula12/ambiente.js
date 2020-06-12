@@ -1,6 +1,10 @@
 let num = [5, 8, 9, 3]
 
-console.log(`Nosso vetor é o ${num}`)
+num.push(1)  // tem que vim antes de por em ordem
+num.sort()
+console.log(num)
+console.log(`Nosso vetor é o ${num} e tem ${num.length} posições.`)
+console.log(`O primeiro valor do vetor é ${num[0]}`)
 
 
 
