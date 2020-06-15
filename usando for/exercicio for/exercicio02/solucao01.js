@@ -138,23 +138,37 @@ function finalizar(){
 
 function solucao08(){
     let mediaOito = document.getElementById("mediaOito")
-    let media = Number(mediaOito.value)
+    let mediaNumber = Number(mediaOito.value)
 
-        if(media % 2 != 0){
+        if(mediaNumber % 2 != 0){
             alert("Por favor, insira um número válido!")
         }
         
         if(!window.listaNumber){
         window.listaNumber = []
         }
-        window.listaNumber.push(media)
+        window.listaNumber.push(mediaNumber)
     
         mediaOito.value = ``
-        media.focus()
+        mediaOito.focus()
 }
 
 function finalizar02(){
-    for()
+    let solucao08 = document.querySelector("#solucao08")
+    let soma02 = 0
+    let media = 0
+
+    for(let y = 0; y < window.listaNumber.length; y++){
+        soma02 += window.listaNumber[y]     
+    }
+
+
+
+    let tagCreat = document.createElement("p")
+    tagCreat.innerHTML = ``
+    tagCreat.innerHTML += `A média é: ${soma02/window.listaNumber.length }`
+    solucao08.appendChild(tagCreat)
+
 }
 
 
