@@ -139,4 +139,5 @@ function finalizar(){
 
 function solucao08(){
     let mediaOito = document.getElementById("mediaOito")
+    
 }
