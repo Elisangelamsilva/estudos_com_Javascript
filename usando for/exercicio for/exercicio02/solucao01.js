@@ -60,12 +60,16 @@ function solucao03(){
 
 function solucao06(){
     let voto = document.querySelector("#voto")
-    
+    let votoNumber = Number(voto.value)
+
+    if(votoNumber > 6 || votoNumber <= 0){
+        alert("Por favor, insira um número válido!")
+    }
     
     if(!window.lista){
     window.lista = []
     }
-    window.lista.push(Number(voto.value))
+    window.lista.push(votoNumber)
 
     voto.value = ``
     voto.focus()
@@ -130,4 +134,9 @@ function finalizar(){
     creatTag.innerHTML += `O candidato mais votado foi o ${numeroEntrada}`
     solucao06.appendChild(creatTag)
 
+}
+
+
+function solucao08(){
+    let mediaOito = document.getElementById("mediaOito")
 }
