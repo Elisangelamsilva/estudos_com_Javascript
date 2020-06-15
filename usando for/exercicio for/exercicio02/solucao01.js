@@ -139,5 +139,17 @@ function finalizar(){
 
 function solucao08(){
     let mediaOito = document.getElementById("mediaOito")
+    let media = Number(mediaOito.value)
+
+        if(media <= 0){
+            alert("Por favor, insira um número válido!")
+        }
+        
+        if(!window.listaNumber){
+        window.listaNumber = []
+        }
+        window.listaNumber.push(media)
     
+        mediaOito.value = ``
+        media.focus()
 }
