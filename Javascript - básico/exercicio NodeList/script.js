@@ -7,6 +7,9 @@ const ps = paragrafo.querySelectorAll("p")
 const estiloBody = getComputedStyle(document.body)
 const backgroundColorBody = estiloBody.backgroundColor;
 
+//cor de fundo dos paragrafos de acordo com a cor de fundo do body
 for(let p of ps){
-    console.log(p)
+    // não pode background-color
+    p.style.backgroundColor = backgroundColorBody
+    p.style.color = "#FFFFFF"
 }
