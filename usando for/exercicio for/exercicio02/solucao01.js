@@ -57,3 +57,77 @@ function solucao03(){
     solucao3.appendChild(criarTag)
   
 }
+
+function solucao06(){
+    let voto = document.querySelector("#voto")
+    
+    
+    if(!window.lista){
+    window.lista = []
+    }
+    window.lista.push(Number(voto.value))
+
+    voto.value = ``
+    voto.focus()
+
+}
+
+function finalizar(){
+    let solucao06 = document.querySelector("#solucao06")
+    let candidato01 = 0
+    let candidato02 = 0
+    let candidato03 = 0
+    let candidato04 = 0
+    let votoNulo = 0
+    let votoBranco = 0
+    let maisVotado = 0
+    let numeroEntrada = 0
+
+    for(let v of window.lista){
+        console.log(v)
+        if(v == 1){
+            candidato01 = candidato01 + 1
+            if(candidato01 > maisVotado){
+                maisVotado = candidato01
+                numeroEntrada = 1
+            }
+
+        } else if(v == 2){
+            candidato02 = candidato02 + 1
+            if(candidato02 > maisVotado){
+                maisVotado = candidato02
+                numeroEntrada = 2
+            }
+        } else if(v == 3){
+            candidato03 = candidato03 + 1
+            if(candidato03 > maisVotado){
+                maisVotado = candidato03
+                numeroEntrada = 3
+            }
+        } else if(v == 4){
+            candidato04 = candidato04 + 1
+            if(candidato04 > maisVotado){
+                maisVotado = candidato04
+                numeroEntrada = 4
+            }
+        } else if(v == 5){
+            votoNulo = votoNulo + 1
+            if(votoNulo > maisVotado){
+                maisVotado = votoNulo
+                numeroEntrada = 5
+            }
+        } else{
+            votoBranco = votoBranco + 1
+            if(votoBranco > maisVotado){
+                maisVotado = votoBranco
+                numeroEntrada = 6
+            }
+        }
+    }
+
+    let creatTag = document.createElement("p")
+    creatTag.innerHTML = ``
+    creatTag.innerHTML += `O candidato mais votado foi o ${numeroEntrada}`
+    solucao06.appendChild(creatTag)
+
+}
