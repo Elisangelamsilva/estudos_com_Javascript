@@ -88,7 +88,6 @@ function finalizar(){
     let numeroEntrada = 0
 
     for(let v of window.lista){
-        console.log(v)
         if(v == 1){
             candidato01 = candidato01 + 1
             if(candidato01 > maisVotado){
@@ -141,7 +140,7 @@ function solucao08(){
     let mediaOito = document.getElementById("mediaOito")
     let media = Number(mediaOito.value)
 
-        if(media <= 0){
+        if(media % 2 != 0){
             alert("Por favor, insira um número válido!")
         }
         
@@ -153,3 +152,9 @@ function solucao08(){
         mediaOito.value = ``
         media.focus()
 }
+
+function finalizar02(){
+    for()
+}
+
+
