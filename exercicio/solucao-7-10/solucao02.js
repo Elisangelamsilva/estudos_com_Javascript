@@ -49,12 +49,4 @@ function solucao10(){
     }else{
         criarTag.innerHTML += `REPROVADO`
     }
-    
-
-   
-
-
-
-
-
 }
