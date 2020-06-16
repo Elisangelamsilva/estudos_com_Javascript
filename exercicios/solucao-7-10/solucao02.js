@@ -67,3 +67,18 @@ function solucao13(){
     console.log(tagCriada)
 
 }
+
+function solucao14(){
+    let quatorze = Number(document.getElementById("quatorze").value)
+    let solucao14 = document.querySelector("#solucao14")
+    let soma03 = 0
+    let media03 = 0
+    
+    if(!window.lista){
+    window.lista = []
+    }
+    window.lista.push(votoNumber)
+
+    voto.value = ``
+    voto.focus()
+}
