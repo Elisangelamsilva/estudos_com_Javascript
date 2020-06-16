@@ -30,15 +30,28 @@ function solucao10(){
     let soma02 = 0
     let media02 = 0
 
-    if(codioAlunos <= 0){
+    if(codiAlunos <= 0){
         alert("Insira um número válido!")
+    } else{
+        soma02 = noUm + noDois + noTres
     }
-    if(){
+    media02 = soma02 / 3
 
+    let criarTag = document.createElement("p")
+    criarTag.innerHTML = ` `
+    criarTag.innerHTML += `A média do aluno com o código ${codiAlunos}`
+    criarTag.innerHTML += ` é: ${Math.floor(media02)}<br>`
+    criarTag.innerHTML += `Suas notas são: NOTA 1: ${noUm}, NOTA 2: ${noDois}, NOTA 3: ${noTres}<br>`
+    solucao10.appendChild(criarTag)
+
+    if(media02 >= 5){
+        criarTag.innerHTML += `APROVADO`
+    }else{
+        criarTag.innerHTML += `REPROVADO`
     }
     
-    soma01 = notaUm + notaDois + notaTres
-    media01 = soma01 / 3
+
+   
 
 
 
