@@ -50,3 +50,15 @@ function solucao10(){
         criarTag.innerHTML += `REPROVADO`
     }
 }
+
+function solucao13(){
+    let fatorial = Number(document.getElementById("fatorial").value)
+    let solucao13 = document.querySelector("#solucao13")
+    res = 1
+
+    for(let i = fatorial; i>1; i++){
+        res = res * i
+        console.log(res)
+    }
+
+}
