@@ -56,9 +56,14 @@ function solucao13(){
     let solucao13 = document.querySelector("#solucao13")
     res = 1
 
-    for(let i = fatorial; i>1; i++){
+    for(let i = fatorial; i > 1; i--){
         res = res * i
-        console.log(res)
     }
+
+    let tagCriada = document.createElement("p")
+    tagCriada.innerHTML = ` `
+    tagCriada.innerHTML += `O número inserido foi ${fatorial}, seu fatorial é ${res}`
+    solucao13.appendChild(tagCriada)
+    console.log(tagCriada)
 
 }
