@@ -69,16 +69,42 @@ function solucao13(){
 }
 
 function solucao14(){
-    let quatorze = Number(document.getElementById("quatorze").value)
-    let solucao14 = document.querySelector("#solucao14")
-    let soma03 = 0
-    let media03 = 0
+    let quatorze = document.getElementById("quatorze")
+    let quatorzeNumber = Number(quatorze.value)
     
     if(!window.lista){
     window.lista = []
     }
-    window.lista.push(votoNumber)
+    window.lista.push(quatorzeNumber)
 
-    voto.value = ``
-    voto.focus()
+    quatorze.value = ``
+    quatorze.focus( )
+}
+
+function finaliza(){
+    let solucao14 = document.querySelector("#solucao14")
+    let negativos = 0
+    let neg = 0
+    let positivos = 0
+    let po = 0
+    let soma03 = 0
+    let media03 = 0
+
+    for(let y of window.lista){
+        if(y > 0){
+            positivos = positivos + y
+            po = po + 1
+        }else{
+            negativos = negativos + y
+            neg = neg + 1
+        }
+    }
+    soma03 = positivos + negativos
+    media03 = soma03 / window.lista.length
+     
+    let tag = document.createElement("p")
+    tag.innerHTML = ``
+    tag.innerHTML += `A quatidade de valores positivos ${po} e negativos ${neg}.`
+    tag.innerHTML += ` A média tota é ${media03} e a porcentagem de negativos é ${neg/window.lista.length} e positivos ${po/window.lista.length}`
+    solucao14.appendChild(tag)
 }
