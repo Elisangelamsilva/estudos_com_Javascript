@@ -108,3 +108,24 @@ function finaliza(){
     tag.innerHTML += ` A média tota é ${media03} e a porcentagem de negativos é ${neg/window.lista.length} e positivos ${po/window.lista.length}`
     solucao14.appendChild(tag)
 }
+
+function solucao16(){
+    let cubo = Number(document.getElementById("cubo").value)
+    let solucao16 = document.querySelector("#solucao16")
+    let quadrado = 0
+    let raiz = 0
+    let aoCubo = 0
+
+        if(cubo == 0){
+            alert("Insira um número válido.")
+        }else{
+            quadrado = cubo * cubo
+            aoCubo = cubo * cubo * cubo
+            raiz = Math.sqrt(cubo)
+        }
+
+        let tag02 = document.createElement("p")
+        tag02.innerHTML = ``
+        tag02.innerHTML += `O quadrado do valor ${cubo} é ${quadrado}, seu cubo é ${aoCubo} e raiz quadrada ${raiz}.`
+        solucao16.appendChild(tag02)
+}
