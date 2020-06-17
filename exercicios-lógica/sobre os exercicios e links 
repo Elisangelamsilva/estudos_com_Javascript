@@ -4,3 +4,5 @@ Solução 01 -  Tem como entrada 5 números, um de cada vez, realizando-se um c�
 Colocando em prática o uso do querySelectorAll, for e if.
 
 solucao 03, 06, 07, 08, 10, 13, 14
+
+Solução 16 - De inicio é inserido um número, assim podendo realizar alguns calculos como raiz quadrado utilizando a função Math.sqrt. É retornado também o cubo e o quadrado do número inserido.   
