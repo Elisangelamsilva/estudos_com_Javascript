@@ -24,4 +24,12 @@ function random(min, max){
     return Math.floor(r)
 }
 
-let rand = random(0, 50);
+const min = 1
+const max = 50
+let rand = random(min, max); // vai gerar um número aleatorio entre 0 e 50
+
+// achar um número entre os números aleatorios/ fica buscando até achar o número 10
+while(rand !== 10){
+    rand = random(min, max) //atualizar o valor da váriavel a cada interação do laço
+    console.log(rand)
+}
