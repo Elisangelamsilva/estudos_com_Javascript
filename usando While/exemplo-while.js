@@ -33,3 +33,10 @@ while(rand !== 10){
     rand = random(min, max) //atualizar o valor da váriavel a cada interação do laço
     console.log(rand)
 }
+
+console.log("########")
+// Do while - faça enquanto - checa o código primeiro e depois a condição
+do{
+    rand = random(min, max) //atualizar o valor da váriavel a cada interação do laço
+    console.log(rand)
+} while  (rand !== 10)
