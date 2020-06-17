@@ -3,6 +3,21 @@ https://www.inf.pucrs.br/~pinho/LaproI/Exercicios/Repeticao/Lista1.htm
 Solução 01 -  Tem como entrada 5 números, um de cada vez, realizando-se um cálculo para saber quantos números negativos foram adicionados.
 Colocando em prática o uso do querySelectorAll, for e if.
 
-solucao 03, 06, 07, 08, 10, 13, 14
+Solução 03 - Analise de vários dados com o intuito de saber a média do salário da população, média de filhos, maior salário e percentual de salários com menos de R$:100. 
+
+Solução 06 - Eleição com 6 opções de voto, dados capturados em array, assim realizando a lógica para saber  o total de votos de cada candidato, votos nulos, brancos e quem ganhou.
+
+Solução 07 - Calcula a média de 3 notas, imprimindo a média e o código do aluno.
+
+Solução 08 - Imprimir a média dos números pares digitados pelo usuário.
+
+Solução 10 - Imprimir a média ponderada do aluno, maior/igual a 5 aparecer a mensagem APROVADO, abaixo de 4 imprimir a mensagem REPROVADO.
+
+Solução 13 - IMprimir o fatorial do número inserido.
+
+Solução 14 - Imprimir a média aritmética dos valores inserido, a quantidade de valores positivos, a quantidade de valores negativos e o percentual de valores negativos e positivos.
 
 Solução 16 - De inicio é inserido um número, assim podendo realizar alguns calculos como raiz quadrado utilizando a função Math.sqrt. É retornado também o cubo e o quadrado do número inserido.   
+
+Solução 18 - Imprimir os divisores dos números pares, e no caso dos ímpares menores de 10
+seu fatorial. Caso seja maior ou igual a 10 mostrar a somo dos inteiros de 1 até o número inserido.
