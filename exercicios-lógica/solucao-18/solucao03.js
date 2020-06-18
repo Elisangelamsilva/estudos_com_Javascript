@@ -78,3 +78,34 @@ function finalizar(){
     tag02.innerHTML += `A quantidade de números pares é ${po} e os ímpares é ${ne}. A média geral é ${media01} e de pares é ${po/window.lista01.length}.`
     solucao19.appendChild(tag02)
 }
+
+function solucao20(){
+    let numero03 = document.getElementById("numero03")
+    let numero03Number = Number(numero03.value)
+     
+    if(!window.lista02){
+        window.lista02 = []
+        }
+        window.lista02.push(numero03Number)
+    
+        numero03.value = ``
+        numero03.focus( )
+}
+
+function finalizar01(){
+    let solucao20 = document.querySelector("#solucao20")
+    let soma03 = 0
+
+    for(let e of window.lista02){
+        if(e < 0){
+            soma03 = soma03  + e
+        }
+    }
+
+    let tag03 = document.createElement("p")
+    tag03.innerHTML = ``
+    tag03.innerHTML += `A somatória dos números negativos é ${soma03}`
+    solucao20.appendChild(tag03)
+
+
+}
