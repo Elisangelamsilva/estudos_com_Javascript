@@ -38,3 +38,43 @@ function solucao18(){
         
     }
 }
+
+function solucao19(){
+    let numero02 = document.getElementById("numero02")
+    let numero02Number = Number(numero02.value)
+     
+    if(!window.lista01){
+        window.lista01 = []
+        }
+        window.lista01.push(numero02Number)
+    
+        numero02.value = ``
+        numero02.focus( )
+}
+
+function finalizar(){
+    let solucao19 = document.querySelector("#solucao19")
+    let soma02 = 0
+    let pares01 = 0
+    let po = 0
+    let impares01 = 0
+    let ne = 0
+    let media01 = 0
+
+    for(let d of window.lista01){
+        if(d % 2 == 0){
+            pares01 = pares01 + d
+            po = po + 1
+        }else{
+            impares01 = impares01 + d
+            ne = ne + 1
+        }
+    }
+    soma02 = pares01 + impares01
+    media01 = soma02 / window.lista01.length
+
+    let tag02 = document.createElement("p")
+    tag02.innerHTML = ``
+    tag02.innerHTML += `A quantidade de números pares é ${po} e os ímpares é ${ne}. A média geral é ${media01} e de pares é ${po/window.lista01.length}.`
+    solucao19.appendChild(tag02)
+}
