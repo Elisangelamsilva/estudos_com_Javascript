@@ -161,13 +161,93 @@ function solucao22(){
 }
 
 function solucao23(){
+    let solucao23 = document.getElementById("solucao23")
     let fromContainer = Array.from(document.querySelectorAll(".form-container"))
+    let arrayPessoa = []
+    let mulheres = 0
+    let maiorIdade = 0
+
 
     for(let k of fromContainer){
         let sexo = k.querySelector('select[name="sexo"]').value
         let corOLhos = k.querySelector('select[name="corOLhos"]').value
         let corCabelo = k.querySelector('select[name="corCabelo"]').value
-
+        let idade = Number(k.querySelector('input[name="idade02"]').value)
+    
+        let pessoa = {
+            sexo: sexo,
+            corCabelo: corCabelo,
+            corOLhos: corOLhos,
+            idade: idade,
+        }
+        arrayPessoa.push(pessoa);
     }
 
+    for(let pessoa of arrayPessoa){
+        if(pessoa.sexo == "F" && pessoa.idade >= 18 && pessoa.idade <= 35 && pessoa.corCabelo == "louro" && pessoa.corOLhos == "verde"){
+            mulheres = mulheres + 1
+        }
+
+        if(pessoa.idade > maiorIdade){
+            maiorIdade = pessoa.idade 
+
+        }
+    }
+
+    let tag05 = document.createElement("p")
+    tag05.innerHTML = ``
+    tag05.innerHTML += `A maior idade é ${maiorIdade}. <br>`
+    tag05.innerHTML += `A quantidade de indivíduos do sexo feminino cuja idade está entre 18 e 35 anos e que tenham olhos verdes e cabelos louros é ${mulheres}`
+    solucao23.appendChild(tag05)
+
+
+}
+
+function solucao29(){
+    let numero04 = document.getElementById("numero04")
+    let numero04Number = Number(numero04.value)
+
+    if(!window.lista03){
+        window.lista03 = []
+    }
+        window.lista03.push(numero04Number)
+    
+        numero04.value = ``
+        numero04.focus( )
+        console.log(window.lista03)
+    
+}
+
+
+function finalizar03(){
+    let solucao29 = document.getElementById("solucao29")
+    let soma04 = 0
+    let soma05 = 0
+    let media02 = 0
+
+    for(let l of window.lista03){
+        if(l >= 13 && l <= 73){
+            soma04 = soma04 + l
+            soma05 = soma05 + 1
+        }
+    }
+    console.log(soma05)
+    media02 = soma04 / soma05
+
+
+    let tag04 = document.createElement("p")
+    tag04.innerHTML = ``
+    tag04.innerHTML += `A média aritmétrica é ${media02}`
+    solucao29.appendChild(tag04)
+
+
+}
+
+function solucao30(){
+    let max = Number(document.getElementById("max").value)
+    let min = Number(document.getElementById("min").value)
+    let solucao30 = document.getElementById("solucao30")
+
+    const n = Math.random() * (max - min) + min
+    console.log(Math.floor(n))
 }
