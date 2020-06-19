@@ -159,3 +159,15 @@ function solucao22(){
     tag04.innerHTML += `A quantidade de mulheres com salários até R$100 é ${ateCem}.`
     solucao22.appendChild(tag04)
 }
+
+function solucao23(){
+    let fromContainer = Array.from(document.querySelectorAll(".form-container"))
+
+    for(let k of fromContainer){
+        let sexo = k.querySelector('select[name="sexo"]').value
+        let corOLhos = k.querySelector('select[name="corOLhos"]').value
+        let corCabelo = k.querySelector('select[name="corCabelo"]').value
+
+    }
+
+}
