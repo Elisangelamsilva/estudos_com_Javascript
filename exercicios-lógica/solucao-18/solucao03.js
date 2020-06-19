@@ -111,37 +111,51 @@ function finalizar01(){
 }
 
 function solucao22(){
-    let salario01 = document.querySelectorAll(".salario")
+    let salario01 = Array.from(document.querySelectorAll(".salario"))
     let idade01 = document.querySelectorAll(".idade")
     let solucao22 = document.getElementById('solucao22')
-    let select01 = document.getElementById("select01")
-    let sexo1 = select01.options[select01.selectedIndex].value
-    let select02 = document.getElementById("select02").value
-    let sexo2 = select02.options[select02.selectedIndex].value
-    let select03 = document.getElementById("select03")
-    let sexo3 = select03.options[select03.selectedIndex].value
+    let select01 = document.querySelectorAll(".select01")
     let mediaSalarios01 = 0
     let somaSalarios01 = 0
+    let menorIdade = Number.POSITIVE_INFINITY
+    let maiorIdade = 0
     let ateCem = 0
+    let arraySexo = []
+
+    // pecorrer os inputs do DOM de salário e pega o valor de casa um. Foi usado o Array.from() pq funciona assim, antes não estava indentificando os arrays do DOM corretamente.
+    for(let h of select01){
+        let selectIndex = h.value
+        arraySexo.push(selectIndex)
+    }
 
 
-    for(let f of salario01){
-        let g = Number(f.value)
+    for(let f in salario01){
+        let g = Number(salario01[f].value)
         somaSalarios01 = somaSalarios01 + g
 
-        if(salario01 <= 100 && ){
-            
+        if( g <= 100 && arraySexo[f] === "F"){
+            ateCem = ateCem + 1
 
         }
 
     }
+
+    for(let i of idade01){
+        let j = Number(i.value)
+        if(j < menorIdade){
+            menorIdade = j
+        }else if(j > maiorIdade){
+            maiorIdade = j
+        }
+    }
+
     mediaSalarios01 = somaSalarios01 / salario01.length
-    console.log(mediaSalarios01)
 
 
-}
-
-
-if(g <= 100){
-    ateCem = ateCem + 1
+    let tag04 = document.createElement("p")
+    tag04.innerHTML = ``
+    tag04.innerHTML += `A média salarial ${mediaSalarios01}. <br>`
+    tag04.innerHTML += `A maior idade do grupos ${maiorIdade} e a menor é ${menorIdade}.<br>`
+    tag04.innerHTML += `A quantidade de mulheres com salários até R$100 é ${ateCem}.`
+    solucao22.appendChild(tag04)
 }
