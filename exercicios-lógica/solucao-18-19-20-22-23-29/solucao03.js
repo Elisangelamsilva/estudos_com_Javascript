@@ -227,7 +227,7 @@ function finalizar03(){
 
     for(let l of window.lista03){
         if(l >= 13 && l <= 73){
-            soma04 = soma04 + l
+            soma04 = soma04 + l  
             soma05 = soma05 + 1
         }
     }
