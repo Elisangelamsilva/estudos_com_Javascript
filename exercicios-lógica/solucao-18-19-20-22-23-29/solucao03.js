@@ -244,10 +244,22 @@ function finalizar03(){
 }
 
 function solucao30(){
-    let max = Number(document.getElementById("max").value)
-    let min = Number(document.getElementById("min").value)
+    let entrada = Number(document.getElementById("entrada").value)
     let solucao30 = document.getElementById("solucao30")
+    let n = 0
 
-    const n = Math.random() * (max - min) + min
-    console.log(Math.floor(n))
+    
+    for(let i = 101; i <= 200; i+=2){
+        if(n === entrada){
+            break
+        }
+        n++
+
+
+    let tag = document.createElement("p")
+    tag.innerHTML = ``
+    tag.innerHTML += ` ${i}`
+    solucao30.appendChild(tag)
+    }
+
 }
