@@ -203,6 +203,32 @@ function solucao23(){
 
 }
 
+
+function solucao25(){
+    let solucao25 = document.getElementById("solucao25")
+    let entradas= Array.from(document.querySelectorAll(".container-roupas"))
+    let arrayEntrada = []
+    let mediaSem = 0
+    let mediaCom = 0
+
+    let tag = document.createElement("p")
+    tag.innerHTML = ``
+    for(let pecas of entradas){
+        let pecasNumber = Number(pecas.value)
+        arrayEntrada.push(pecasNumber)
+
+        mediaSem = pecasNumber + mediaSem
+        mediaCom = (pecasNumber * 1,2) + mediaCom 
+
+
+        tag.innerHTML += `O preço antigo é ${pecasNumber}<br>`
+        tag.innerHTML += `O novo preço é ${pecasNumber * 1,2}`
+        solucao25.appendChild(tag)
+        
+    }
+
+}
+
 function solucao29(){
     let numero04 = document.getElementById("numero04")
     let numero04Number = Number(numero04.value)
