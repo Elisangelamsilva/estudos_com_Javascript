@@ -229,6 +229,64 @@ function solucao25(){
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+function solucao26(){
+    let gerar = Number(document.getElementById("gerar").value)
+    let solucao26 = document.getElementById("solucao26")
+    let n = 0
+
+    for(let i = 1000; i <= 1999; i++){
+        if(n >= gerar){
+            break
+    }
+    
+    if((i % 11) === 5){
+        let tag = document.createElement("p")
+        tag.innerHTML = ` ${i}`
+        solucao26.appendChild(tag)
+        n+=1
+    }
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function solucao29(){
     let numero04 = document.getElementById("numero04")
     let numero04Number = Number(numero04.value)
