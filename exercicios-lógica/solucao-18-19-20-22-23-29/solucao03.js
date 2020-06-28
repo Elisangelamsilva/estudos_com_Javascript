@@ -230,16 +230,6 @@ function solucao25(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
 function solucao26(){
     let gerar = Number(document.getElementById("gerar").value)
     let solucao26 = document.getElementById("solucao26")
@@ -261,30 +251,45 @@ function solucao26(){
 }
 
 
+function solucao27(){
+    let numero = document.getElementById("numero04")
+    let numeroNumber = Number(numero.value)
+     
+    if(!window.lista){
+        window.lista = []
+        }
+        window.lista.push(numeroNumber)
+    
+        numero.value = ``
+        numero.focus( )
+}
+
+function finalizar04(){
+    let solucao27 = document.querySelector("#solucao27")
+    let soma = 0
+    let maior = 0
+    let menor = Number.POSITIVE_INFINITY
+
+    for(let e of window.lista){
+        if(e > maior){
+            maior = e
+        }if(e < menor){
+            menor = e
+        }
+
+        soma = soma + e
+        console.log(soma)
+
+    } 
+
+    let tag = document.createElement("p")
+    tag.innerHTML = ``
+    tag.innerHTML += `O maior valor é ${maior} e o menor ${menor}. <br>`
+    tag.innerHTML += `A média é ${soma/window.lista.length}`
+    solucao27.appendChild(tag)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 function solucao29(){
