@@ -110,6 +110,35 @@ function finalizar01(){
 
 }
 
+function solucao21(){
+    let numero = document.getElementById("numero05")
+    let numeroNumber = Number(numero.value)
+     
+    if(!window.lista){
+        window.lista = []
+        }
+        window.lista.push(numeroNumber)
+    
+        numero.value = ``
+        numero.focus( )
+}
+
+function finalizar05(){
+    let solucao21 = document.querySelector("#solucao21")
+    let soma = 0
+
+    for(let v of window.lista){
+        if(v % 2 === 0){
+            soma = soma + v
+        }
+    }
+    let tag03 = document.createElement("p")
+    tag03.innerHTML = ``
+    tag03.innerHTML += `A somatória dos números pares é ${soma}`
+    solucao21.appendChild(tag03)
+}
+
+
 function solucao22(){
     let salario01 = Array.from(document.querySelectorAll(".salario"))
     let idade01 = document.querySelectorAll(".idade")
