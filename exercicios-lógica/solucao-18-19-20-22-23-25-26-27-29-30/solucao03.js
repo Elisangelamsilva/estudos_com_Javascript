@@ -2,17 +2,15 @@ function solucao18(){
     let numero01 = Number(document.getElementById("numero01").value)
     let solucao18 = document.querySelector("#solucao18")
 
-
-
     if(numero01 <= 0){
         alert("Insira um número válido!")
     }else if(numero01 % 2 == 0){
         let divisores = 0
         let a = 1        
         while(numero01 % a == 0){
-            divisores = divisores + a
+            divisores = divisores + 1
             a++
-        }
+    }
         let tag01 = document.createElement("p")
         tag01.innerHTML = `O número ${numero01} é par e existe ${divisores} divisores do número.`
         solucao18.appendChild(tag01)
@@ -38,6 +36,7 @@ function solucao18(){
         
     }
 }
+
 
 function solucao19(){
     let numero02 = document.getElementById("numero02")
@@ -232,10 +231,10 @@ function solucao23(){
 
 }
 
-
+// Falta finalizar
 function solucao25(){
     let solucao25 = document.getElementById("solucao25")
-    let entradas= Array.from(document.querySelectorAll(".container-roupas"))
+    let entradas= Array.from(document.querySelectorAll(".container-roupas .roupas"))
     let arrayEntrada = []
     let mediaSem = 0
     let mediaCom = 0
@@ -247,11 +246,12 @@ function solucao25(){
         arrayEntrada.push(pecasNumber)
 
         mediaSem = pecasNumber + mediaSem
-        mediaCom = (pecasNumber * 1,2) + mediaCom 
+        mediaCom = (pecasNumber * 1.2)
+        console.log(pecasNumber)
 
 
         tag.innerHTML += `O preço antigo é ${pecasNumber}<br>`
-        tag.innerHTML += `O novo preço é ${pecasNumber * 1,2}`
+        tag.innerHTML += `O novo preço é ${pecasNumber * 1.2}<br>`
         solucao25.appendChild(tag)
         
     }
@@ -281,7 +281,7 @@ function solucao26(){
 
 
 function solucao27(){
-    let numero = document.getElementById("numero04")
+    let numero = document.getElementById("numero06")
     let numeroNumber = Number(numero.value)
      
     if(!window.lista){
