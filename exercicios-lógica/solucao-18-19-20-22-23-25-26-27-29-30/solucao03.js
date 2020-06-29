@@ -320,6 +320,23 @@ function finalizar04(){
 
 }
 
+function solucao28(){
+    let numero = Number(document.getElementById("numero07").value)
+    let solucao28 = document.getElementById("solucao28")
+    let soma = 0
+
+    for(let i = 1; i < numero; i++){
+        soma += 1/i
+
+    }
+    let tag = document.createElement("p")
+    tag.innerHTML = ``
+    tag.innerHTML += `A soma é ${soma}`
+    solucao28.appendChild(tag)
+
+
+}
+
 
 function solucao29(){
     let numero04 = document.getElementById("numero04")
