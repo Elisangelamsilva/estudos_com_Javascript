@@ -231,7 +231,7 @@ function solucao23(){
 
 }
 
-// Falta finalizar
+
 function solucao25(){
     let solucao25 = document.getElementById("solucao25")
     let entradas= Array.from(document.querySelectorAll(".container-roupas .roupas"))
