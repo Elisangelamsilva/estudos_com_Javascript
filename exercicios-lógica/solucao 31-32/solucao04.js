@@ -29,3 +29,15 @@ function finalizar(){
     solucao31.innerHTML += `<p>A quantidade de números dentro do intervalo é ${dentroIntervalo}, a quantidade fora é ${foraIntervalo}.</p>`
 
 }
+
+function solucao32(){
+    let numero01 = Array.from(document.querySelectorAll(".numero01").value)
+    let arrayEntrada = []
+
+    for(let numero of numero01){
+        let numeroNumber = Number(numero.value)
+        arrayEntrada.push(numeroNumber)
+
+        if(numeroNumber % 2)
+    }
+}
