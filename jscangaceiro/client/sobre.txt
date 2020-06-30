@@ -1,0 +1,1 @@
+Aplicação que permite o cadastro de negociações de balsa de valores.
