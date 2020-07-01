@@ -47,11 +47,12 @@ function solucao32(){
 
 function solucao33(){
     let numero03 = Number(document.getElementById("numero03").value)
+    let solucao33 = document.querySelector("#solucao33")
+
     let num = 0
 
     for(let i = 1; i <= numero03; i++){
         num = numero03 * i
-        console.log(numero03,"x",i,"=",num)
+        solucao33.innerHTML += `<p>${numero03}x${i} = ${num}</p>`
     }
-
 }
