@@ -31,13 +31,19 @@ function finalizar(){
 }
 
 function solucao32(){
-    let numero01 = Array.from(document.querySelectorAll(".numero01").value)
-    let arrayEntrada = []
+    let numero01 = Number(document.getElementById("numero01").value)
+    let numero02 = Number(document.getElementById("numero02").value)
+    let solucao32 = document.querySelector("#solucao32")
+    let pares = []
 
-    for(let numero of numero01){
-        let numeroNumber = Number(numero.value)
-        arrayEntrada.push(numeroNumber)
 
-        if(numeroNumber % 2)
+    for(let i = numero01; i <= numero02; i++){
+        if((i % 2) === 0){
+            pares.push(i)
+        }
     }
+    solucao32.innerHTML += `<P>Os números pares são ${pares }</P>`
+
+
+
 }
