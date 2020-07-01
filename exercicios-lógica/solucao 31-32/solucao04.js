@@ -43,7 +43,15 @@ function solucao32(){
         }
     }
     solucao32.innerHTML += `<P>Os números pares são ${pares }</P>`
+}
 
+function solucao33(){
+    let numero03 = Number(document.getElementById("numero03").value)
+    let num = 0
 
+    for(let i = 1; i <= numero03; i++){
+        num = numero03 * i
+        console.log(numero03,"x",i,"=",num)
+    }
 
 }
