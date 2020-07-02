@@ -154,5 +154,31 @@ function solucao37(){
 }
 
 
+//Não finalizado
+function solucao38(){
+    let solucao38 = document.querySelector("#solucao38")
+    let multiplicacao = 1
+
+    for(let i = 93; i >= 1477; i+2){
+        multiplicacao = multiplicacao * i
+    }
+
+}
+
+//como mostrar os divisores e o próprio número
+function solucao39(){
+    let numero = Number(document.getElementById("numero08").value)
+    let solucao39 = document.querySelector("#solucao39")
+    let soma = 0
+    let a = 1  
+
+    while(numero % a == 0){
+        soma = soma + a
+        a++
+    }
+    solucao39.innerHTML += `<p>A soma dos divisores é ${soma}</p>`
+}
+
+
 
 
