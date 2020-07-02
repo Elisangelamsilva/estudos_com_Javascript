@@ -57,6 +57,7 @@ function solucao33(){
     }
 }
 
+// DANDO ERRO
 function solucao34(){
     let solucao34 = document.getElementById("solucao34")
     let fromContainer = Array.from(document.querySelectorAll(".form-container"))
@@ -88,7 +89,7 @@ function solucao34(){
 
 }
 
-
+//FALTA FINALIZAR
 function solucao35(){
     let solucao35 = document.getElementById("solucao35")
     let fromContainer = Array.from(document.querySelectorAll(".form-container"))
@@ -130,7 +131,6 @@ function solucao36(){
 }
 function finalizar01(){
     let solucao36 = document.querySelector("#solucao36")
-    let resultado = 1
 
     for(dados of window.lista){
         let resultado = 1
@@ -141,5 +141,18 @@ function finalizar01(){
     }
 
 }
+
+function solucao37(){
+    let numero = Number(document.getElementById("numero07").value)
+    let solucao37 = document.querySelector("#solucao37")
+    let multiplicacao = 0
+
+    for(let i = 1; i <= 20; i++){
+        multiplicacao = numero * i
+        solucao37.innerHTML += `<p> ${numero}x${i} = ${multiplicacao}<br></p>`
+    }
+}
+
+
 
 
