@@ -121,3 +121,24 @@ function solucao48(){
     }
 
 }
+
+function solucao50(){
+    let solucao50 = document.querySelector("#solucao50")
+    let base = Number(document.getElementById("base").value)
+    let expoente = Number(document.getElementById("expoente").value)
+
+    
+
+    solucao50.innerHTML += `<P>A potência com base ${base} e expoente ${expoente} tem como resultado ${Math.pow(base, expoente)}.</P>`
+}
+
+function solucao51(){
+    let numero = Number(document.getElementById("numero13").value)
+    let solucao51 = document.querySelector("#solucao51")
+    let fatorial = 1
+
+    for(let i = numero; i > 1; i--){
+        fatorial = fatorial * i
+    }
+    solucao51.innerHTML += `O fatorial do número ${numero} é ${fatorial}`
+}
