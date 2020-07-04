@@ -3,3 +3,6 @@ Aplicação que permite o cadastro de negociações de balsa de valores.
 É utilizado sobmit no botão pois isso significa que, ao ser clicado, fará o
 formulário disparar o evento submit responsável pelo envio de seus dados. Porém nesse caso queremos apenas ler os valores inseridos pelo usuário em cada campo e construir uma nova <tr>. Em cada input é inserido o atributo required pois só conseguirar disparar o event caso todos sejam preenchidos. 
 
+Toda negociação possui um volume, que nada
+mais é do que o valor da negociação multiplicado pela quantidade
+negociada no dia.

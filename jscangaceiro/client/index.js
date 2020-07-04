@@ -9,6 +9,10 @@ var campos = [
 var tbody = document.querySelector('table tbody');
 
 document.querySelector('.form').addEventListener('submit', function(event) {
+
+        // cancelando a submissão do formulário
+        event.preventDefault();
+
     var tr = document.createElement('tr');
 
     // cria uma coluna com o valor de cada campo do nosso array
@@ -27,5 +31,14 @@ document.querySelector('.form').addEventListener('submit', function(event) {
     tdVolume.textContent = campos[1].value * campos[2].value;
     // adicionando a td que faltava à tr
     tr.appendChild(tdVolume);
+
+    // limpa o campo da data
+    campos[0].value = '';
+    // limpa o campo da quantidade
+    campos[1].value = 1;
+    // limpa o campo do valor
+    campos[2].value = 0;
+    // foca no campo da data
+    campos[0].focus();
 
 });
