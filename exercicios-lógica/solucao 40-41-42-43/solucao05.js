@@ -23,9 +23,6 @@ function solucao41(){
     let solucao41 = document.querySelector("#solucao41")
     let media = 0
 
-    console.log(num1)
-    console.log(num2)
-    console.log(num3)
     media = (num1*2 + num2*4 + num3*3)/10
     solucao41.innerHTML += `<p> A média ponderada é ${media} </p>`
 }
@@ -127,8 +124,6 @@ function solucao50(){
     let base = Number(document.getElementById("base").value)
     let expoente = Number(document.getElementById("expoente").value)
 
-    
-
     solucao50.innerHTML += `<P>A potência com base ${base} e expoente ${expoente} tem como resultado ${Math.pow(base, expoente)}.</P>`
 }
 
@@ -142,3 +137,40 @@ function solucao51(){
     }
     solucao51.innerHTML += `O fatorial do número ${numero} é ${fatorial}`
 }
+
+function solucao53(){
+    let primo = Number(document.getElementById("primo").value)
+    let solucao53 = document.querySelector("#solucao53")
+
+    for(let i = 2; i <= primo; i++){
+        let ePrimo = true;
+
+        for(let divisor = 2; divisor < i; divisor++){
+            if(i % divisor === 0){
+                ePrimo = false;
+                break;
+            }
+        }
+
+        if(ePrimo) solucao53.innerHTML += `<p> ${i} </p>`
+
+    }
+}
+
+
+
+// Não tá aparecendo resultado fora do for
+function solucao54(){
+    let solucao54 = document.querySelector("#solucao54")
+    let inicio = Number(document.getElementById("inicio").value)
+    let fim = Number(document.getElementById("fim").value)
+    let intervalo = 0
+
+    for(let i = inicio; inicio > fim; i++){
+        intervalo = intervalo + 1
+    }
+
+    solucao54.innerHTML += `<p>A divisão por três do intervalo entre [${inicio}-${fim}] é ${intervalo/3}.</p>`
+}
+
+
