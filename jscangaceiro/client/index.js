@@ -5,3 +5,5 @@ var campos = [
     document.querySelector('#valor'),
     document.querySelector('#quantidade')
 ];
+
+var tbody = document.querySelector('table tbody');
