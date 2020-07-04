@@ -158,7 +158,6 @@ function solucao53(){
 }
 
 
-
 // Não tá aparecendo resultado fora do for
 function solucao54(){
     let solucao54 = document.querySelector("#solucao54")
