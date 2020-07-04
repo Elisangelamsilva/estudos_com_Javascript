@@ -170,13 +170,16 @@ function solucao39(){
     let numero = Number(document.getElementById("numero08").value)
     let solucao39 = document.querySelector("#solucao39")
     let soma = 0
-    let a = 1  
+    let a = 1
+    let arrayDivi = []  
 
-    while(numero % a == 0){
+
+    while((numero % a) == 0){
+        arrayDivi.push(a)
         soma = soma + a
         a++
     }
-    solucao39.innerHTML += `<p>A soma dos divisores é ${soma}</p>`
+    solucao39.innerHTML += `<p>O número ${numero} tem como divisores ${arrayDivi} e a soma dos divisores é ${soma}</p>`
 }
 
 
