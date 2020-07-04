@@ -10,4 +10,13 @@ var tbody = document.querySelector('table tbody');
 
 document.querySelector('.form').addEventListener('submit', function(event) {
     var tr = document.createElement('tr');
+
+    campos.forEach(function(campo) {
+        // cria uma td sem informações
+        var td = document.createElement('td');
+        // atribui o valor do campo à td
+        td.textContent = campo.value;
+        // adiciona a td na tr
+        tr.appendChild(td);
+        });
 });
