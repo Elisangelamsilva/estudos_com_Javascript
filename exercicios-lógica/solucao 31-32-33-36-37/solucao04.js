@@ -153,15 +153,22 @@ function solucao37(){
 }
 
 
-//Não finalizado
 function solucao38(){
     let solucao38 = document.querySelector("#solucao38")
-    let multiplicacao = 1
 
-    for(let i = 93; i >= 1477; i+2){
-        multiplicacao = multiplicacao * i
+    for(let i = 92; i <= 1476; i++){
+        let divisores = 0
+
+        for(let b = 1; b <= i; b++){
+            if((i % b) == 0){
+                divisores += 1
+            }
+        }
+
+        if(divisores == 2){
+            solucao38.innerHTML += `<p> ${i} </p>`
+        }
     }
-
 }
 
 //como mostrar os divisores e o próprio número
