@@ -57,35 +57,32 @@ function solucao33(){
     }
 }
 
-// DANDO ERRO
+
 function solucao34(){
     let solucao34 = document.getElementById("solucao34")
     let fromContainer = Array.from(document.querySelectorAll(".form-container"))
     let alto = 0
-    let baixo = 0
-    let alunoBaixo = 0
+    let baixo = Number.POSITIVE_INFINITY
+    let alunoBaixo = Number.POSITIVE_INFINITY
     let alunoAlto = 0
     console.log(fromContainer)
 
     for(let dados of fromContainer){
-        let alunosCodigos = dados.querySelectorAll(".codigo")
-        let alunosAlturas = dados.querySelectorAll(".altura")
-        console.log(alunosAlturas)
-        console.log(alunosCodigos)
+        let alunoCodigo = Number(dados.querySelector(".codigo").value)
+        let alunoAltura = Number(dados.querySelector(".altura").value)
 
-        if(alunosAlturas > alto){
-            alto = alto
-            alunoAlto = alunosCodigos
-        }if(alunosAlturas < baixo){
-            baixo = baixo
-            alunoBaixo = alunoBaixo
+        if(alunoAltura > alto){
+            alto = alunoAltura
+            alunoAlto = alunoCodigo
+        }if(alunoAltura < baixo){
+            baixo = alunoAltura
+            alunoBaixo = alunoCodigo
 
 
         }
-        console.log(alunoAlto, alto)
-        console.log(alunoBaixo, baixo)
-        
     }
+
+    solucao34.innerHTML += `<p> O alunos mais baixo tem o código ${alunoBaixo} com altuta ${baixo}, e o mais alto é o aluno ${alunoAlto} com altura ${alto}. </p>`
 
 }
 
