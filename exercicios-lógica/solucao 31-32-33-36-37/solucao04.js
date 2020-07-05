@@ -86,30 +86,32 @@ function solucao34(){
 
 }
 
-//FALTA FINALIZAR
+
 function solucao35(){
     let solucao35 = document.getElementById("solucao35")
-    let fromContainer = Array.from(document.querySelectorAll(".form-container"))
-    let arrayPessoa = []
-    let mediaMulheres = 0
+    let fromContainer = Array.from(document.querySelectorAll("#alunos-container"))
+    let somaMulheres = 0
+    let quantMulheres = 0
+    let somaTurma = 0
     let maiorAltura = 0
-    let menorAltura = 0
-
+    let menorAltura = Number.POSITIVE_INFINITY
 
     for(let dados of fromContainer){
-        let sexo = k.querySelector('select[name="sexo"]').value
-        let altura = Number(k.querySelector('input[name="altura"]').value)
-    
-        let pessoa = {
-            sexo: sexo,
-            altura: altura,
+        let sexo = dados.querySelector('select[name="sexo"]').value
+        let altura = Number(dados.querySelector('input[name="altura"]').value)
+
+        if(sexo == "F"){
+            somaMulheres = somaMulheres + altura
+            quantMulheres = quantMulheres + 1
+        }if(maiorAltura < altura){
+            maiorAltura = altura
+        }if(menorAltura > altura){
+            menorAltura = altura
         }
-        arrayPessoa.push(pessoa);
+        somaTurma += altura 
     }
+    solucao35.innerHTML +=`<p>A média da altura da turma é ${somaTurma/fromContainer.length}, a maior altura é ${maiorAltura} e a menor é ${menorAltura}. A média da altura das mulheres é ${somaMulheres/quantMulheres} </p>`
 
-    for(let pessoa of arrayPessoa){
-
-    }
 
 }
 
