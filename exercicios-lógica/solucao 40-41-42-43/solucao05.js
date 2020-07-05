@@ -158,14 +158,13 @@ function solucao53(){
 }
 
 
-// Não tá aparecendo resultado fora do for
 function solucao54(){
     let solucao54 = document.querySelector("#solucao54")
     let inicio = Number(document.getElementById("inicio").value)
     let fim = Number(document.getElementById("fim").value)
     let intervalo = 0
 
-    for(let i = inicio; inicio > fim; i++){
+    for(let i = inicio; i <= fim; i++){
         intervalo = intervalo + 1
     }
 
