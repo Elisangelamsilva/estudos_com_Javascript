@@ -60,6 +60,9 @@ const el = e.target;
     if(el.classList.contains("apagar")){
         //remover o li - pai e filho(conteúdo)
         el.parentElement.remove()
+        //apagar no local storage
+        salvarTarefa();
+
     }
 })
 
@@ -78,4 +81,17 @@ function salvarTarefa(){
     const tarefasJSON = JSON.stringify(listaDeTarefas)
     //local no navegador que pode salvar coisas
     localStorage.setItem('tarefa', tarefasJSON)
+}
+
+//ler as tarefas e colocar no UL
+
+function adicionaTarefasSalvas(){
+    const tarefas = localStorage.getItem("tarefa")
+
+    //converte de volta para array
+    const listaDeTarefas = JSON.parse(tarefa);
+
+    for(let tarefa of listaDeTarefas){
+        criaTarefa(tarefa)
+    }
 }
