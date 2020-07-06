@@ -18,6 +18,7 @@ function criaTarefa(textoInput){
     li.innerText = textoInput;
     tarefa.appendChild(li);
     limpaInput();
+    criaBotaoApagar(li);
 }
 
 //criar uma tarefa
@@ -39,4 +40,13 @@ inputTarefa.addEventListener("keypress", function(e){
 function limpaInput(){
     inputTarefa.value = '';
     inputTarefa.focus();
+}
+
+// li pq vai ser onde vai ser adicionado o botão
+function criaBotaoApagar(li){
+    li.inputTarefa += ' ';
+    const botaoApagar = document.createElement("button");
+    botaoApagar.innerText = 'Apagar';
+    li.appendChild(botaoApagar)
+
 }
