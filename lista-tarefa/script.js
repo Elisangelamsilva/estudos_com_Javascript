@@ -17,10 +17,26 @@ function criaTarefa(textoInput){
     const li = criaLi();
     li.innerText = textoInput;
     tarefa.appendChild(li);
+    limpaInput();
 }
 
 //criar uma tarefa
 function criaLi(){ 
     const li = document.createElement("li");
     return li;
+}
+
+// quando clicar a tecla Enter(13)
+inputTarefa.addEventListener("keypress", function(e){
+    if(e.keyCode === 13){
+        if(!inputTarefa.value) return;
+        criaTarefa(inputTarefa.value)
+
+    }
+})
+
+//limpar os inputs para dd outros dados
+function limpaInput(){
+    inputTarefa.value = '';
+    inputTarefa.focus();
 }
