@@ -54,26 +54,25 @@ function solucao43(){
     solucao43.innerHTML += `<p>Dados de entrada: ${arrayNumeros} e em ordem crescente: ${arrayNumeros.sort()} </p>`
 }
 
-//FALTA TUDO
+
 function solucao47(){
     let solucao47 = document.getElementById("solucao47")
-    let cliente01 = Array.from(document.querySelector(".form-container01"))
-    let cliente02 = document.querySelector(".form-container02")
-    let cliente03 = document.querySelector(".form-container03")
+    let clienteContainer = Array.from(document.querySelectorAll(".cliente-container"))
+    let cliente02 = []
+    let clientes01 = []
 
-    console.log(cliente01)
+    for(let dados of clienteContainer){
+        let nomeCliente = dados.querySelector('input[name="nomeCliente"]').value
+        let gastos = Number(dados.querySelector('input[name="gastos"]').value)
 
-
-    for(let dados01 of cliente01){
-        let nomeCliente1 = dados01.querySelector('input[name="nomeCliente1"]')
-        let gastos1 = Number(dados01.querySelector('input[name="gastos1"]').value)
-        let media01 = 0
-        if(gastos1 > 500.000){
-            media01 = (media01 * 1.1)
-        }
-        console.log(media01)
-    
+        if(gastos < 500.000){
+            clientes01.push(nomeCliente)
+        }else{ 
+            cliente02.push(nomeCliente)
+        }    
     }
+
+    solucao47.innerHTML +=`<p> Os clientes que receberam 10% de bonus são: ${clientes01} e os que receberam 15% são: ${cliente02}. </p>`
 
 }
 
