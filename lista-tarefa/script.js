@@ -47,6 +47,7 @@ function criaBotaoApagar(li){
     li.inputTarefa += ' ';
     const botaoApagar = document.createElement("button");
     botaoApagar.innerText = 'Apagar';
+    botaoApagar.setAttribute('class', 'apagar')
     li.appendChild(botaoApagar)
 
 }
