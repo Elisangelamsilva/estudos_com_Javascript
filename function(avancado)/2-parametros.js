@@ -8,6 +8,7 @@ function funacao02(){
     console.log(arguments[3]);
 }
 funacao02("Valor", 1,2,3,4,5,6,7,8,9,0);
+
 //funcao para somar todo os valores recebidos
 function funacao03(){
     let total = 0
@@ -16,3 +17,15 @@ function funacao03(){
     }
 }
 funacao03(1,2,3,4,5,6,7,8,9,0);
+
+//
+function funcao04(a,b){
+    b = b || 0;
+    console.log(a + b);
+}
+funcao04(2);
+//jeito moderno para resolver esse problema
+function funcao04(a,b=2 ){
+    console.log(a + b);
+}
+funcao04(2);
