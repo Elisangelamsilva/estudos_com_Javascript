@@ -61,10 +61,7 @@
     <script src="app/domain/negociacao/Negociocao.js"></script>
     <script>
         // instancias de negociação, ou seja, dois objetos criado a parit da classe
-        var n1 = new Negociacao();
-        n1.data = new Date();
-        n1.quantidade = 10;
-        n1.valor = 200.50;
+        var n1 = new Negociacao(new Date(), 5, 700);
         console.log(n1);
 
     </script>
