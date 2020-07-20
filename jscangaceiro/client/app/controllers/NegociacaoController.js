@@ -3,6 +3,11 @@ class NegociacaoController{
     adiciona(event) {
         // cancelando a submissão do formulário
         event.preventDefault();
-        alert('Chamei ação no controller');
+
+        // buscando os elementos
+        let inputData = document.querySelector('#data');
+        let inputQuantidade = Number(document.querySelector('#quantidade').value);
+        let inputValor = Number(document.querySelector("#valor").value);
+
         }
 }
