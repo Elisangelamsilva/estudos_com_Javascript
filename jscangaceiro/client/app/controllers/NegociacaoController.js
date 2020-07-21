@@ -14,9 +14,16 @@ class NegociacaoController{
         // cancelando a submissão do formulário
         event.preventDefault();
 
-        let negociacao = new Negociacao(
-            this._inputData.value,this._inputQuantidade,this._inputValor
-        )
+        let data = new Date(
+            ...this._inputData.value
+            .split('-')
+            .map(function(item,indice) {
+                if(indice == 1) {
+                    return item - 1;
+                }
+                    return item;
+            })
+        
+        )};
 
-        }
 }
