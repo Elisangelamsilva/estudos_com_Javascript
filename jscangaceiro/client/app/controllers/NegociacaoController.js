@@ -4,8 +4,8 @@ class NegociacaoController{
     constructor() {
         // buscando os elementos
         this._inputData = document.querySelector('#data').value;
-        this._inputQuantidade = Number(document.querySelector('#quantidade').value);
-        this._inputValor = Number(document.querySelector("#valor").value);
+        this._inputQuantidade = document.querySelector('#quantidade');
+        this._inputValor = document.querySelector("#valor");
 
     }
 
@@ -13,13 +13,14 @@ class NegociacaoController{
     adiciona(event) {
         // cancelando a submissão do formulário
         event.preventDefault();
-
-        let data = new Date(...this._inputData
-            .value.split('-')
-            .map(function(item, indice) {
-            return item - indice % 2;
-            }));
-
+        //chamando o método estático
+        let negociacao = new Negociacao(
+            DateConverter.paraData(this._inputData.value),
+            parseInt(this._inputQuantidade.value),
+            parseFloat(this._inputValor.value)
+        );
+        let diaMesAno = converter.paraTexto(negociacao.data);
+        console.log(diaMesAno);
         }
 }
 
