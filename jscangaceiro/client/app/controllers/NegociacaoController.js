@@ -3,9 +3,11 @@ class NegociacaoController{
     //Sendo assim, a busca pelos elementos do DOM só serão realizadas uma única vez no constructor, e não mais a cada chamada do método adicionar().
     constructor() {
         // buscando os elementos
-        this._inputData = document.querySelector('#data').value;
-        this._inputQuantidade = document.querySelector('#quantidade');
-        this._inputValor = document.querySelector("#valor");
+        let $ = document.querySelector.bind(document);
+        this._inputData = $('#data');
+        this._inputQuantidade = $('#quantidade');
+        this._inputValor = $('#valor');
+        this._negociacoes = new Negociacoes();
 
     }
 
@@ -19,8 +21,9 @@ class NegociacaoController{
             parseInt(this._inputQuantidade.value),
             parseFloat(this._inputValor.value)
         );
-        let diaMesAno = converter.paraTexto(negociacao.data);
-        console.log(diaMesAno);
-        }
+            // inclui a negociação
+        this._negociacoes.adiciona(negociacao);
+        // imprime a lista com o novo elemento
+        console.log(this._negociacoes.paraArray());
 }
 

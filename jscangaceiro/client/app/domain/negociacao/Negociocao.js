@@ -24,4 +24,19 @@ class Negociacao{
     get valor() {
         return this._valor;
     }
+
+    //encapsula o array de negociações. Acesso apenas através dos métodos dessa classe. Criaremos um modelo de negociações.
+    constructor(){
+        this._negociacoes = [];
+    }
+
+    //por usar o prefixo _ a lista só pode acessar pelo método da própria classe. Por isso utilizar o método adiciona, que receberá uma negociação. 
+    adiciona(negociacao){
+        this.-_negociacoes.push(negociacao)
+    }
+
+    //será chamado pela instancia de Negociacoe, retornando uma array interno encapsulado pela classe para leitura
+    paraArray(){
+        return this._negociacoes;
+    }
 }
