@@ -15,15 +15,31 @@ class NegociacaoController{
     adiciona(event) {
         // cancelando a submissão do formulário
         event.preventDefault();
-        //chamando o método estático
-        let negociacao = new Negociacao(
-            DateConverter.paraData(this._inputData.value),
-            parseInt(this._inputQuantidade.value),
-            parseFloat(this._inputValor.value)
-        );
             // inclui a negociação
-        this._negociacoes.adiciona(negociacao);
+        this._negociacoes.adiciona(this._criaNegociacao());
+        // será que conseguimos apagar a lista?
+        this._negociacoes.paraArray().length = 0;
         // imprime a lista com o novo elemento
         console.log(this._negociacoes.paraArray());
+        this._limpaFormulario();
+
+    }
+
+    
+    _limpaFormulario() {
+        this._inputData.value = '';
+        this._inputQuantidade.value = 1;
+        this._inputValor.value = 0.0
+        this._inputData.focus();
+    }
+
+    _criaNegociacao() {
+        // retorna uma instância de negociação
+        return new Negociacao(
+        DateConverter.paraData(this._inputData.value),
+        parseInt(this._inputQuantidade.value),
+        parseFloat(this._inputValor.value)
+        );
+    }
 }
 
