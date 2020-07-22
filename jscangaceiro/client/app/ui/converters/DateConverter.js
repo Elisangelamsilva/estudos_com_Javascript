@@ -1,13 +1,13 @@
 class DateConverter{
-    paraTexto(data) {
+   static paraTexto(data) {
         return data.getDate()
             + '/' + (data.getMonth() + 1)
             + '/' + data.getFullYear();
     }
 
-   static paraData(texto) {
-        return new Date(...texto.split('-').map((item,indice) =>
-item - indice % 2));
+    paraData(texto) {
+        return `${data.getDate()}/${data.getMonth()+1}/${data.get
+    FullYear()}`;
     }
 
     constructor() {
