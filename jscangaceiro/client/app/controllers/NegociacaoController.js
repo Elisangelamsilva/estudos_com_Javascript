@@ -15,10 +15,6 @@ class NegociacaoController{
     adiciona(event) {
         // cancelando a submissão do formulário
         event.preventDefault();
-            // inclui a negociação
-        this._negociacoes.adiciona(this._criaNegociacao());
-        // será que conseguimos apagar a lista?
-        this._negociacoes.paraArray().length = 0;
         // imprime a lista com o novo elemento
         console.log(this._negociacoes.paraArray());
         this._limpaFormulario();

@@ -32,11 +32,12 @@ class Negociacao{
 
     //por usar o prefixo _ a lista só pode acessar pelo método da própria classe. Por isso utilizar o método adiciona, que receberá uma negociação. 
     adiciona(negociacao){
-        this.-_negociacoes.push(negociacao)
+        this._negociacoes.push(negociacao)
     }
 
     //será chamado pela instancia de Negociacoe, retornando uma array interno encapsulado pela classe para leitura
+    // retorna uma nova referência criada com os itens de this._negociacoes
     paraArray(){
-        return this._negociacoes;
+        return [].concat(this._negociacoes);
     }
 }
